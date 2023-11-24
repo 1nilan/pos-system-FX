@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="btnBack" prefHeight="735.0" prefWidth="1053.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <ImageView fitHeight="789.0" fitWidth="1485.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pexels-carlo-martin-alcordo-2449665.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <TextField fx:id="txtId" layoutX="160.0" layoutY="199.0" prefHeight="31.0" prefWidth="106.0" promptText="Customer ID" />
+      <TextField fx:id="txtName" layoutX="304.0" layoutY="199.0" prefHeight="26.0" prefWidth="188.0" promptText="Name" />
+      <TextField fx:id="txtAddress" layoutX="536.0" layoutY="199.0" prefHeight="26.0" prefWidth="188.0" promptText="Address" />
+      <TextField fx:id="txtSalary" layoutX="764.0" layoutY="199.0" prefHeight="26.0" prefWidth="155.0" promptText="Salary" />
+      <Button layoutX="813.0" layoutY="283.0" mnemonicParsing="false" onAction="#saveButtonOnAction" prefHeight="31.0" prefWidth="106.0" text="Save" />
+      <TableView fx:id="tblCustomer" layoutX="169.0" layoutY="355.0" prefHeight="302.0" prefWidth="734.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="112.8000431060791" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="183.20005798339844" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="195.20001220703125" text="Address" />
+            <TableColumn fx:id="colSalary" prefWidth="124.800048828125" text="Salary" />
+            <TableColumn fx:id="colOption" prefWidth="108.0001220703125" text="Option" />
+        </columns>
+      </TableView>
+      <Button layoutX="881.0" layoutY="701.0" mnemonicParsing="false" onAction="#reloadButtonOnAction" prefHeight="31.0" prefWidth="90.0" text="Reload" />
+      <Button layoutX="675.0" layoutY="283.0" mnemonicParsing="false" onAction="#updateButtonOnAction" prefHeight="31.0" prefWidth="98.0" text="Update" />
+      <JFXButton fx:id="btnBack" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" onAction="#backButtonOnAction" prefHeight="31.0" prefWidth="98.0" style="-fx-background-color: F32020;" text="Back" textAlignment="CENTER" />
+      <Label contentDisplay="CENTER" layoutX="398.0" layoutY="67.0" prefHeight="81.0" prefWidth="256.0" text="Customer" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font size="55.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

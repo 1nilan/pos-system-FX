@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="700.0" prefWidth="1053.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardFormController">
+   <children>
+      <ImageView fitHeight="702.0" fitWidth="1085.0" layoutX="-3.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/pexels-pixabay-264636.jpg" />
+         </image>
+         <effect>
+            <GaussianBlur />
+         </effect>
+      </ImageView>
+      <Button layoutX="437.0" layoutY="188.0" mnemonicParsing="false" onAction="#customerButtonOnAction" prefHeight="58.0" prefWidth="180.0" text="Customer" />
+      <Label fx:id="lblTime" alignment="CENTER" layoutX="796.0" layoutY="33.0" prefHeight="38.0" prefWidth="223.0" text="HH:mm:ss" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnItem" layoutX="437.0" layoutY="278.0" onAction="#itemsButtonOnAction" prefHeight="58.0" prefWidth="180.0" style="-fx-background-color: #808080;" text="Items" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="69.0" layoutY="42.0" prefHeight="38.0" prefWidth="223.0" text="dd:MM:yyyy" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPlaceOrder" layoutX="437.0" layoutY="367.0" onAction="#placeOrderButtonOnAction" prefHeight="58.0" prefWidth="180.0" style="-fx-background-color: #808080;" text="Place Order" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
